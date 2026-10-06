@@ -113,14 +113,15 @@ func runRenderHUDAndExit() -> Never {
     print("已渲染：\(path)")
     print("  尺寸 \(Int(content.frame.width))x\(Int(content.frame.height))，3 倍输出")
 
-    // app 层也渲一张（-apps 后缀）：窗口层那张只看得到一个 app 格子
-    let appCandidates = ["/Applications/Google Chrome.app", "/Applications/Safari.app",
-                         "/System/Applications/Notes.app", "/System/Applications/Calculator.app"]
+    // app 层也渲一张（-apps 后缀）：窗口层那张只看得到一个 app 格子。
+    // 样例取 ⌘4 那组（AI 助手）——和配置窗截图里的 ⌘4 是同一组，两张图讲同一件事。
+    let appCandidates = ["/Applications/ChatGPT.app", "/Applications/Claude.app",
+                         "/Applications/Doubao.app"]
     let groupApps = appCandidates.filter { FileManager.default.fileExists(atPath: $0) }.map {
         AppRef(path: $0, displayName: FileManager.default.displayName(atPath: $0)
                    .replacingOccurrences(of: ".app", with: ""))
     }
-    let appsState = GroupSwitcher.State(shortcut: "⌘2", layer: .apps, apps: groupApps,
+    let appsState = GroupSwitcher.State(shortcut: "⌘4", layer: .apps, apps: groupApps,
                                         appIndex: min(1, max(0, groupApps.count - 1)),
                                         windows: [], windowIndex: 0)
     let appsPath = (path as NSString).deletingPathExtension + "-apps.png"
