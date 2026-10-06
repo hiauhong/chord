@@ -1,0 +1,11 @@
+# 构建产物
+.build/
+build/
+
+# Xcode / SwiftPM 噪声
+.swiftpm/
+*.xcodeproj
+xcuserdata/
+
+# macOS
+.DS_Store
