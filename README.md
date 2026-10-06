@@ -45,8 +45,8 @@ Chord 也会把它们列出来并切过去。
 
 ### 方式一：下载现成的（推荐）
 
-到 [Releases](https://github.com/hiauhong/chord/releases/latest) 下载 `Chord-v0.1.0.zip`，
-解压出 `Chord.app`，拖进「应用程序」文件夹。
+到 [Releases](https://github.com/hiauhong/chord/releases/latest) 下载最新的
+`Chord-v*.zip`，解压出 `Chord.app`，拖进「应用程序」文件夹。
 
 **第一次打开要右键（或按住 Control）点它 → 选「打开」**，再在弹窗里点一次「打开」——
 目前还没有 Apple 的开发者签名与公证，直接双击会被 Gatekeeper 拦下。**只需要做这一次**，
