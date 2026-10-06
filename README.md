@@ -43,17 +43,26 @@ Chord 也会把它们列出来并切过去。
 
 ## 安装
 
-> ⚠️ 目前**还没有签名公证的安装包**，需要自己构建一次。三条命令，
-> 前提是装好 Xcode 命令行工具（终端里跑 `xcode-select --install`）。
+### 方式一：下载现成的（推荐）
+
+到 [Releases](https://github.com/hiauhong/chord/releases/latest) 下载 `Chord-v0.1.0.zip`，
+解压出 `Chord.app`，拖进「应用程序」文件夹。
+
+**第一次打开要右键（或按住 Control）点它 → 选「打开」**，再在弹窗里点一次「打开」——
+目前还没有 Apple 的开发者签名与公证，直接双击会被 Gatekeeper 拦下。**只需要做这一次**，
+之后就正常双击。
+
+> 要放进「应用程序」就一次放好：**之后别再挪它**——「开机自启」记的是它的位置。
+
+### 方式二：自己构建
+
+前提是装好 Xcode 命令行工具（终端里跑 `xcode-select --install`）：
 
 ```sh
 git clone https://github.com/hiauhong/chord.git
 cd chord
 Scripts/build-app.sh && open build/Chord.app
 ```
-
-想放进「应用程序」文件夹也行（把 `build/Chord.app` 拖进去），但**之后别再挪它**——
-「开机自启」记的是它的位置。
 
 ## 第一次运行：授权
 
